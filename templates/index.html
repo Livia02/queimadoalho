@@ -1,8 +1,159 @@
-{% extends 'layout.html' %}
-
+{% extends 'layout.html'%}
 {% block content %}
-<h1>Olá, {{ nome }} bem vindo ao Flaskola </h1>
-<p>Este é o seu primeiro aplicativo WEB</p>
-<a href="{{ url_for('Usuario.login') }}"> Faça Login!</a>
-<a href="{{ url_for('Aluno.lista') }}"> Alunos!</a>
-{% endblock %}
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='imagens/cccccccc.jpg') }}" alt="comida.jpeg" width="100%" height="100%">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><a class="btn btn-lg btn-danger" href="ingressos.html">Ingressos</a></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='imagens/BAR  DA ISA.png') }}" alt="comida.jpeg" width="100%" height="100%">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><a class="btn btn-lg btn-danger" href="#">Localização</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='imagens/kkk.jpeg') }}" alt="comida.jpeg" width="100%" height="100%">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><a class="btn btn-lg btn-danger" href="programacao.html">Programação</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="{{ url_for('static', filename='imagens/panela2.png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg> -->
+          <h2 class="fw-normal">COMIDAS TÍPICAS
+          </h2>
+          <p>Confira os pratos tipicos </p>
+          <p><a class="btn btn-dark" href="comidas_tipicas.html">Veja mais detalhes &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="{{ url_for('static', filename='imagens/garrafa (1).png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg> -->
+          <h2 class="fw-normal">OPEN BAR</h2>
+          <p> Bebidas diversificadas </p>
+
+          <p><a class="btn btn-dark" href="bebidas.html">Veja mais detalhes &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="{{ url_for('static', filename='imagens/violao2.png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg> -->
+          <h2 class="fw-normal"> SHOWS</h2>
+          <p>Atrações do evento</p>
+          <p><a class="btn btn-dark" href="shows.html">Veja mais detalhes &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">ESPAÇO BERRANTÃO <span class="text-body-secondary"></span></h2>
+          <p class="lead">Espaço Berrantão, é um salão de eventos localizado no Parque do Peão de Barretos.
+            Festas como formatura, casamentos e aniversário, são umas das principais que ocorrem no espaço.
+
+        </div>
+        <div class="col-md-5">
+          <img src="{{ url_for('static', filename='imagens/montado.jpg') }}" alt="Feijoada"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">OPEN BAR <span class="text-body-secondary"></span></h2>
+          <p class="lead">O público terá acesso ilimitado a determinadas bebidas (em alguns casos, a todas as
+            disponíveis) durante o evento.Nós Berrantão Open Bar oferece diversos tipos de bebidas a vontade,a partir
+            dos 18 anos.
+            Somente os refrigerantes e as cervejas será servido na mesa.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="{{ url_for('static', filename='imagens/berrantão bar.jpg') }}" alt="Feijoada"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
+              class="text-body-secondary">Checkmate.</span></h2>
+          <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really
+            intended to be actually read, simply here to give you a better view of what this would look like with some
+            actual content. Your content.</p>
+        </div>
+        <div class="col-md-5">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
+              fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+          </svg>
+        </div>
+      </div>
+
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Localização <span class="text-body-secondary"></span></h2>
+          <p class="lead">Centro de Lazer e Eventos "Berrantão"
+
+            Com 3005 m² de área coberta, ar condicionado central e equipada com palcos, camarotes, cozinha, bares, sanitários e camarins, o Berrantão é a casa de eventos do Parque do Peão, onde acontecem os mais populares bailes e encontros musicais.</p>
+        </div>
+        <div class="col-md-5">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59790.07205363864!2d-48.640860581947585!3d-20.511165298591337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb83789839c0c1%3A0x64c7b1103af8d271!2zRXNwYcOnbyBCZXJyYW50w6Nv!5e0!3m2!1spt-BR!2sbr!4v1686931533213!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div><!-- /.container -->
+    {% endblock %}
